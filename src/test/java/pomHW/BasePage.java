@@ -1,3 +1,5 @@
+package pomHW;
+
 import org.testng.annotations.Test;
 
 public class BasePage extends BaseTest {
