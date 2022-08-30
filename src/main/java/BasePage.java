@@ -37,4 +37,10 @@ public class BasePage {
 
     }
 
+    public void sendKeys(By locator,String input){
+        getElement(locator).clear();
+        getElement(locator).sendKeys(input);
+
+    }
+
 }
