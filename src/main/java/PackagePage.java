@@ -20,7 +20,7 @@ public class PackagePage extends BasePage {
     private final By qtyInput = By.xpath("//input[@name='quantity']");
     private final By addToCartBtn = By.xpath("//button[text()='Add to cart']");
     private final By viewCartBtn = By.xpath("//i[@class='icon_bag_alt']");
-
+    private final By productInCard = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
 
     public PackagePage(WebDriver driver) {
 
@@ -78,6 +78,12 @@ public class PackagePage extends BasePage {
 
     public void viewCart(){
         click(viewCartBtn);
+
+    }
+
+    public void pinkDropShoulderInTheCart(){
+        elementDisplayed(productInCard);
+
 
     }
 

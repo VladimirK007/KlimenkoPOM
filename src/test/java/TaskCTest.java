@@ -13,6 +13,7 @@ public class TaskCTest extends BaseTest {
         packagePage.qtyInput("3");
         packagePage.addToCart();
         packagePage.viewCart();
+        packagePage.pinkDropShoulderInTheCart();
 
     }
 }
