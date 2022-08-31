@@ -7,10 +7,11 @@ public class TaskBTest extends BaseTest {
         webDriver.get("https://shop.demoqa.com/");
 
         PackagePage packagePage = new PackagePage(webDriver);
-        packagePage.toFav();
-        packagePage.prodAddedToWishlistWait();
-        packagePage.myWishlistMenuButton();
-        packagePage.itemIsDisplayed();
+
+        packagePage.addTokyoTalkiesToFav();
+        packagePage.waitProdAddedConfirmationMessage();
+        packagePage.clickMyWishlistMenuButton();
+        packagePage.verifyTokyoTalkiesInTheFavorites();
 
     }
 }

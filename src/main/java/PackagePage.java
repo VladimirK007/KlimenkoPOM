@@ -3,10 +3,10 @@ import org.openqa.selenium.WebDriver;
 
 public class PackagePage extends BasePage {
 
-    private final By tokyoTalkiesToFav = By.xpath("//a[@data-product-id='704']");
+    private final By addTokyoTalkiesToFavBtn = By.xpath("//a[@data-product-id='704']");
     private final By myWishlistMenuButton = By.xpath("//a[contains(.,\"My Wishlist\")]");
     private final By prodAddedToWishlistMessage = By.xpath("//div[@id='yith-wcwl-message']");
-    private final By wishListPageForm = By.xpath("//form[contains(.,\"Tokyo Talkies\")]");
+    private final By wishListContainsTokyoTalkies = By.xpath("//form[contains(.,\"Tokyo Talkies\")]");
 
 
     private final By pinkDropShoulderOversizedTShirt = By.xpath("//div[@class='noo-product-item noo-product-sm-4 " +
@@ -20,72 +20,61 @@ public class PackagePage extends BasePage {
     private final By qtyInput = By.xpath("//input[@name='quantity']");
     private final By addToCartBtn = By.xpath("//button[text()='Add to cart']");
     private final By viewCartBtn = By.xpath("//i[@class='icon_bag_alt']");
-    private final By productInCard = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
+    private final By productInCart = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
 
     public PackagePage(WebDriver driver) {
 
         super(driver);
     }
 
-    public void toFav() {
+    public void addTokyoTalkiesToFav() {
 
-        click(tokyoTalkiesToFav);
-
+        click(addTokyoTalkiesToFavBtn);
     }
 
-    public void prodAddedToWishlistWait() {
+    public void waitProdAddedConfirmationMessage() {
 
         waitForElementVisibility(prodAddedToWishlistMessage, 5);
-
     }
 
-    public void myWishlistMenuButton() {
+    public void clickMyWishlistMenuButton() {
         click(myWishlistMenuButton);
-
     }
 
-    public void itemIsDisplayed() {
-        elementDisplayed(wishListPageForm);
+    public void verifyTokyoTalkiesInTheFavorites() {
+
+        elementDisplayed(wishListContainsTokyoTalkies);
     }
 
-    public void chooseProductPinkDropShoulderOversizedTShirt() {
+    public void clickProductPinkDropShoulderOversizedTShirt() {
         click(pinkDropShoulderOversizedTShirt);
-
     }
 
     public void chooseColor() {
         click(chooseColorDrp);
         click(colorPink);
-
     }
 
     public void chooseSize() {
         click(chooseSizeDrp);
         click(size37);
-
     }
 
     public void qtyInput(String input) {
         click(qtyInput);
         sendKeys(qtyInput, input);
-
     }
 
-    public void addToCart(){
+    public void addToCart() {
         click(addToCartBtn);
-
     }
 
-    public void viewCart(){
+    public void viewCart() {
         click(viewCartBtn);
-
     }
 
-    public void pinkDropShoulderInTheCart(){
-        elementDisplayed(productInCard);
-
-
+    public void verifyProductInTheCart() {
+        elementDisplayed(productInCart);
     }
-
 
 }

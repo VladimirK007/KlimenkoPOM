@@ -7,13 +7,14 @@ public class TaskCTest extends BaseTest {
         webDriver.get("https://shop.demoqa.com/");
 
         PackagePage packagePage = new PackagePage(webDriver);
-        packagePage.chooseProductPinkDropShoulderOversizedTShirt();
+
+        packagePage.clickProductPinkDropShoulderOversizedTShirt();
         packagePage.chooseColor();
         packagePage.chooseSize();
         packagePage.qtyInput("3");
         packagePage.addToCart();
         packagePage.viewCart();
-        packagePage.pinkDropShoulderInTheCart();
+        packagePage.verifyProductInTheCart();
 
     }
 }
