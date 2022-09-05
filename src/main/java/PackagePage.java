@@ -19,7 +19,7 @@ public class PackagePage extends BasePage {
     private final By size37 = By.xpath("//option[@value='37']");
     private final By qtyInput = By.xpath("//input[@name='quantity']");
     private final By addToCartBtn = By.xpath("//button[text()='Add to cart']");
-    private final By viewCartBtn = By.xpath("//i[@class='icon_bag_alt']");
+    private final By viewCartBtn = By.xpath("//a[@class='button wc-forward']");
     private final By productInCart = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
 
     public PackagePage(WebDriver driver) {
