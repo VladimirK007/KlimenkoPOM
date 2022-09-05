@@ -1,3 +1,6 @@
+package newPackage;
+
+import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 
 public class TaskBTest extends BaseTest {

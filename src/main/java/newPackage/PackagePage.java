@@ -1,3 +1,6 @@
+package newPackage;
+
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -23,56 +26,65 @@ public class PackagePage extends BasePage {
     private final By productInCart = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
 
     public PackagePage(WebDriver driver) {
-
         super(driver);
     }
 
+    @Step("Add Tokyo Talkies to Favorites")
     public void addTokyoTalkiesToFav() {
 
         click(addTokyoTalkiesToFavBtn);
     }
 
+    @Step("Product Added confirmation message is displayed")
     public void waitProdAddedConfirmationMessage() {
 
         waitForElementVisibility(prodAddedToWishlistMessage, 5);
     }
 
+    @Step("Click My Wishlist menu button")
     public void clickMyWishlistMenuButton() {
         click(myWishlistMenuButton);
     }
 
+    @Step("Tokyo Talkies is displayed in the Wishlist")
     public void verifyTokyoTalkiesInTheFavorites() {
 
         elementDisplayed(wishListContainsTokyoTalkies);
     }
 
+    @Step("Click on the Pink Drop Shoulder Oversized T Shirt item")
     public void clickProductPinkDropShoulderOversizedTShirt() {
         click(pinkDropShoulderOversizedTShirt);
     }
 
+    @Step("Choose Pink color from the color dropdown")
     public void chooseColor() {
         click(chooseColorDrp);
         click(colorPink);
     }
-
+    @Step("Choose 37 size from the size dropdown")
     public void chooseSize() {
         click(chooseSizeDrp);
         click(size37);
     }
 
+    @Step("Select 3 in the QTY selector")
     public void qtyInput(String input) {
         click(qtyInput);
         sendKeys(qtyInput, input);
     }
 
+    @Step("Click on the Add To Cart button")
     public void addToCart() {
         click(addToCartBtn);
     }
 
+    @Step("Click on the View Cart button")
     public void viewCart() {
         click(viewCartBtn);
     }
 
+    @Step("Pink Drop Shoulder Oversized T Shirt product is present in the Cart")
     public void verifyProductInTheCart() {
         elementDisplayed(productInCart);
     }

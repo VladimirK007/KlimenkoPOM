@@ -1,3 +1,5 @@
+package newPackage;
+
 import org.testng.annotations.Test;
 
 public class TaskCTest extends BaseTest {
