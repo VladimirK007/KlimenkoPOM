@@ -4,7 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PackagePage extends BasePage {
+public class CartPageObject extends BasePage {
 
     private final By addTokyoTalkiesToFavBtn = By.xpath("//a[@data-product-id='704']");
     private final By myWishlistMenuButton = By.xpath("//a[contains(.,\"My Wishlist\")]");
@@ -25,7 +25,7 @@ public class PackagePage extends BasePage {
     private final By viewCartBtn = By.xpath("//a[@class='button wc-forward']");
     private final By productInCart = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
 
-    public PackagePage(WebDriver driver) {
+    public CartPageObject(WebDriver driver) {
         super(driver);
     }
 

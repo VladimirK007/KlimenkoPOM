@@ -1,20 +1,20 @@
 package newPackage;
 
-import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 
 public class TaskBTest extends BaseTest {
 
     @Test
-    public void firstTest() {
+    public void addProductToFav() {
         webDriver.get("https://shop.demoqa.com/");
 
-        PackagePage packagePage = new PackagePage(webDriver);
+        HomePageObject homePageObject = new HomePageObject(webDriver);
+        WishlistPageObject wishlistPageObject = new WishlistPageObject(webDriver);
 
-        packagePage.addTokyoTalkiesToFav();
-        packagePage.waitProdAddedConfirmationMessage();
-        packagePage.clickMyWishlistMenuButton();
-        packagePage.verifyTokyoTalkiesInTheFavorites();
+        homePageObject.addTokyoTalkiesToFav();
+        homePageObject.waitProdAddedConfirmationMessage();
+        homePageObject.clickMyWishlistMenuButton();
+        wishlistPageObject.verifyTokyoTalkiesInTheFavorites();
 
     }
 }

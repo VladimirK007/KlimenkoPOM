@@ -5,18 +5,21 @@ import org.testng.annotations.Test;
 public class TaskCTest extends BaseTest {
 
     @Test
-    public void firstTest() {
+    public void addProductToCart() {
         webDriver.get("https://shop.demoqa.com/");
 
-        PackagePage packagePage = new PackagePage(webDriver);
+        HomePageObject homePageObject = new HomePageObject(webDriver);
+        PinkDropShoulderTShirtDetailsPageObject pinkDropShoulderTShirtDetailsPageObject =
+                new PinkDropShoulderTShirtDetailsPageObject(webDriver);
+        CartPageObject cartPageObject = new CartPageObject(webDriver);
 
-        packagePage.clickProductPinkDropShoulderOversizedTShirt();
-        packagePage.chooseColor();
-        packagePage.chooseSize();
-        packagePage.qtyInput("3");
-        packagePage.addToCart();
-        packagePage.viewCart();
-        packagePage.verifyProductInTheCart();
+        homePageObject.clickProductPinkDropShoulderOversizedTShirt();
+        pinkDropShoulderTShirtDetailsPageObject.chooseColor();
+        pinkDropShoulderTShirtDetailsPageObject.chooseSize();
+        pinkDropShoulderTShirtDetailsPageObject.qtyInput("3");
+        pinkDropShoulderTShirtDetailsPageObject.addToCart();
+        pinkDropShoulderTShirtDetailsPageObject.viewCart();
+        cartPageObject.verifyProductInTheCart();
 
     }
 }
