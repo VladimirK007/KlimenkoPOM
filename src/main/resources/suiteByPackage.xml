@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Component Tests">
-    <test name="a-t2">
+    <test name="test By PackageName">
         <packages>
             <package name="newPackage" />
         </packages>

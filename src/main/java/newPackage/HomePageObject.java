@@ -15,14 +15,6 @@ public class HomePageObject extends BasePage {
             "not_featured post-1497 product type-product status-publish has-post-thumbnail product_cat-t-shirt " +
             "product_tag-t-shirt product_tag-women has-featured first instock shipping-taxable " +
             "purchasable product-type-variable']");
-    private final By chooseColorDrp = By.xpath("//select[@id='pa_color']");
-    private final By colorPink = By.xpath("//option[@value='pink']");
-    private final By chooseSizeDrp = By.xpath("//select[@id='pa_size']");
-    private final By size37 = By.xpath("//option[@value='37']");
-    private final By qtyInput = By.xpath("//input[@name='quantity']");
-    private final By addToCartBtn = By.xpath("//button[text()='Add to cart']");
-    private final By viewCartBtn = By.xpath("//a[@class='button wc-forward']");
-    private final By productInCart = By.xpath("//a[contains(.,'pink drop shoulder oversized t shirt - Pink')]");
 
     public HomePageObject(WebDriver driver) {
         super(driver);
