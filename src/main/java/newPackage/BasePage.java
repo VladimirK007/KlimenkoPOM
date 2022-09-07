@@ -33,13 +33,12 @@ public class BasePage {
 
     }
 
-    public void elementDisplayed(By locator) {
+    public boolean elementDisplayed(By locator) {
 
-        getElement(locator).isDisplayed();
-
+        return getElement(locator).isDisplayed();
     }
 
-    public void sendKeys(By locator,String input){
+    public void sendKeys(By locator, String input) {
         getElement(locator).clear();
         getElement(locator).sendKeys(input);
 

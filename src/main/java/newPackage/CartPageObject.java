@@ -14,8 +14,8 @@ public class CartPageObject extends BasePage {
 
     @Step("Pink Drop Shoulder Oversized T Shirt product is present in the Cart")
     public boolean verifyProductInTheCart() {
-        elementDisplayed(productInCart);
-        return true;
+
+          return elementDisplayed(productInCart);
     }
 
 }
