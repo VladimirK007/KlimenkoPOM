@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Component Tests">
+<suite name="Suite By Class">
     <test name="test by ClassName">
         <classes>
             <class name="newPackage.TaskBTest" />
