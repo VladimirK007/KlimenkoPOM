@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePageObject extends BasePage {
 
-    private final By addTokyoTalkiesToFavBtn = By.xpath("//a[@data-product-id='704']");
+    private final By addTokyoTalkiesToFavBtn = By.xpath("//div[@data-fragment-ref=\"704\"]");
     private final By myWishlistMenuButton = By.xpath("//a[contains(.,\"My Wishlist\")]");
     private final By prodAddedToWishlistMessage = By.xpath("//div[@id='yith-wcwl-message']");
 

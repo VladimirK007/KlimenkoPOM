@@ -1,5 +1,6 @@
 package newPackage;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TaskCTest extends BaseTest {
@@ -19,7 +20,7 @@ public class TaskCTest extends BaseTest {
         pinkDropShoulderTShirtDetailsPageObject.qtyInput("3");
         pinkDropShoulderTShirtDetailsPageObject.addToCart();
         pinkDropShoulderTShirtDetailsPageObject.viewCart();
-        cartPageObject.verifyProductInTheCart();
+        Assert.assertTrue(cartPageObject.verifyProductInTheCart());
 
     }
 }
