@@ -13,9 +13,9 @@ public class WishlistPageObject extends BasePage {
     }
 
     @Step("Tokyo Talkies is displayed in the Wishlist")
-    public void verifyTokyoTalkiesInTheFavorites() {
+    public boolean verifyTokyoTalkiesInTheFavorites() {
 
-        elementDisplayed(wishListContainsTokyoTalkies);
+        return elementDisplayed(wishListContainsTokyoTalkies);
     }
 }
 

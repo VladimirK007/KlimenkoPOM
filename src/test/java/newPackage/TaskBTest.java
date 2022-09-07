@@ -1,5 +1,6 @@
 package newPackage;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TaskBTest extends BaseTest {
@@ -14,7 +15,8 @@ public class TaskBTest extends BaseTest {
         homePageObject.addTokyoTalkiesToFav();
         homePageObject.waitProdAddedConfirmationMessage();
         homePageObject.clickMyWishlistMenuButton();
-        wishlistPageObject.verifyTokyoTalkiesInTheFavorites();
+        Assert.assertTrue(wishlistPageObject.verifyTokyoTalkiesInTheFavorites());
+
 
     }
 }
