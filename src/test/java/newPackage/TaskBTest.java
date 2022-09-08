@@ -13,17 +13,21 @@ public class TaskBTest extends BaseTest {
         HomePageObject homePageObject = new HomePageObject(webDriver);
         WishlistPageObject wishlistPageObject = new WishlistPageObject(webDriver);
 
-        log("Add Tokyo Talkies to Favorites");
         homePageObject.addTokyoTalkiesToFav();
+        log("Add Tokyo Talkies to Favorites");
 
-        log("Product Added confirmation message is displayed");
+
         homePageObject.waitProdAddedConfirmationMessage();
+        log("Product Added confirmation message is displayed");
 
-        log("Click My Wishlist menu button");
+
         homePageObject.clickMyWishlistMenuButton();
+        log("Click My Wishlist menu button");
 
-        log("Tokyo Talkies is displayed in the Wishlist");
+
         Assert.assertTrue(wishlistPageObject.verifyTokyoTalkiesInTheFavorites());
+        log("Tokyo Talkies is displayed in the Wishlist");
+
 
 
     }
