@@ -18,29 +18,24 @@ public class PinkDropShoulderTShirtDetailsPageObject extends BasePage {
         super(driver);
     }
 
-    @Step("Choose Pink color from the color dropdown")
     public void chooseColor() {
         click(chooseColorDrp);
         click(colorPink);
     }
-    @Step("Choose 37 size from the size dropdown")
     public void chooseSize() {
         click(chooseSizeDrp);
         click(size37);
     }
 
-    @Step("Select 3 in the QTY selector")
     public void qtyInput(String input) {
         click(qtyInput);
         sendKeys(qtyInput, input);
     }
 
-    @Step("Click on the Add To Cart button")
     public void addToCart() {
         click(addToCartBtn);
     }
 
-    @Step("Click on the View Cart button")
     public void viewCart() {
         click(viewCartBtn);
     }

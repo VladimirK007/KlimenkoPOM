@@ -21,8 +21,28 @@ public class BaseTest {
         webDriver = new ChromeDriver();
     }
 
+    @Step("Allure log: {0}")
+    public void log(String message){
+
+        System.out.println(message);
+        saveScreenshotPNG();
+    }
+
+    @Attachment(value = "Page screenshot", type = "image/png")
+    public byte[] saveScreenshotPNG() {
+        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    }
+
     @AfterMethod
     public void closeDriver() {
         webDriver.quit();
     }
+
+    public WebDriver getWebDriver(){
+        return webDriver;
+
+    }
+
 }
+
+

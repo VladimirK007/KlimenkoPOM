@@ -12,7 +12,6 @@ public class WishlistPageObject extends BasePage {
         super(driver);
     }
 
-    @Step("Tokyo Talkies is displayed in the Wishlist")
     public boolean verifyTokyoTalkiesInTheFavorites() {
 
         return elementDisplayed(wishListContainsTokyoTalkies);

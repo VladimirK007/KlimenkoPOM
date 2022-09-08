@@ -20,24 +20,20 @@ public class HomePageObject extends BasePage {
         super(driver);
     }
 
-    @Step("Add Tokyo Talkies to Favorites")
     public void addTokyoTalkiesToFav() {
 
         click(addTokyoTalkiesToFavBtn);
     }
 
-    @Step("Product Added confirmation message is displayed")
     public void waitProdAddedConfirmationMessage() {
 
         waitForElementVisibility(prodAddedToWishlistMessage, 5);
     }
 
-    @Step("Click My Wishlist menu button")
     public void clickMyWishlistMenuButton() {
         click(myWishlistMenuButton);
     }
 
-    @Step("Click on the Pink Drop Shoulder Oversized T Shirt item")
     public void clickProductPinkDropShoulderOversizedTShirt() {
         click(pinkDropShoulderOversizedTShirt);
     }
