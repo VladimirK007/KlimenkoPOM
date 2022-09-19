@@ -2,7 +2,11 @@ package newPackage;
 
 import io.qameta.allure.Step;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+@Listeners({TestListener.class})
+
 
 public class TaskBTest extends BaseTest {
 
