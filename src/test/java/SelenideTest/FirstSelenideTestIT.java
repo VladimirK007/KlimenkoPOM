@@ -3,9 +3,10 @@ package SelenideTest;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class BuildYourComputer {
+public class FirstSelenideTestIT {
 
     @Test
     public void userCanLoginByUsername() {
@@ -21,10 +22,10 @@ public class BuildYourComputer {
         $(By.xpath("//input[@id='product_attribute_4_8']")).click();
         $(By.xpath("//button[@id='add-to-cart-button-1']")).click();
         $(By.xpath("//p[@class='content']" +
-                "[contains(.,'The product has been added to your ')]")).isDisplayed();
+                "[contains(.,'The product has been added to your ')]")).should(disappear);
         $(By.xpath("//span[@class='cart-label']")).click();
-        $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'RAM: 8GB')]")).isDisplayed();
-        $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'HDD: 320 GB')]")).isDisplayed();
+        $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'RAM: 8GB')]")).shouldBe(visible);
+        $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'HDD: 320 GB')]")).shouldBe(visible);
         //new version
     }
 
