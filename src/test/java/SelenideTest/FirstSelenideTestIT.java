@@ -26,7 +26,7 @@ public class FirstSelenideTestIT {
         $(By.xpath("//span[@class='cart-label']")).click();
         $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'RAM: 8GB')]")).shouldBe(visible);
         $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'HDD: 320 GB')]")).shouldBe(visible);
-        //new version
+
     }
 
 }
