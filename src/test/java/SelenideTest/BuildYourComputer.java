@@ -4,9 +4,8 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
 
-public class buildYourComputer {
+public class BuildYourComputer {
 
     @Test
     public void userCanLoginByUsername() {
@@ -26,7 +25,7 @@ public class buildYourComputer {
         $(By.xpath("//span[@class='cart-label']")).click();
         $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'RAM: 8GB')]")).isDisplayed();
         $(By.xpath("//td[@class='product']//div[@class='attributes'][contains(.,'HDD: 320 GB')]")).isDisplayed();
-
+        //new version
     }
 
 }
