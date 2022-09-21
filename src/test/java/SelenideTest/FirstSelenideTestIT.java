@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class FirstSelenideTestIT {
 
     @Test
-    public void userCanLoginByUsername() {
+    public void buildYourComputer() {
         open("https://demo.nopcommerce.com/build-your-own-computer");
         $(By.xpath("//select[@id='product_attribute_1']")).
                 selectOption("2.5 GHz Intel Pentium Dual-Core E2200 [+$15.00]");
